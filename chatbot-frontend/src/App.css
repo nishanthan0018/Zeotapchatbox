@@ -1,0 +1,158 @@
+/* 🌌 Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+/* 🟢 Chatbot Container */
+.chatbot-container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  padding: 25px;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/* 🟡 Light Mode */
+.light-mode {
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  color: #333;
+}
+
+.light-mode .chatbot-container {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ✨ Title */
+.chatbot-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* 🎤 Input Field */
+.chatbot-input {
+  width: 90%;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 12px;
+  border-radius: 10px;
+  resize: none;
+  font-size: 14px;
+  color: #fff;
+  outline: none;
+  transition: 0.3s;
+  text-align: center; /* ✅ This centers placeholder text */
+}
+
+.chatbot-input::placeholder {
+  text-align: center; /* ✅ Ensures placeholder is also centered */
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.chatbot-input:focus {
+  border-color: #00c6ff;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* 🚀 Button */
+.chatbot-button {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.chatbot-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0px 5px 20px rgba(0, 198, 255, 0.5);
+}
+
+.chatbot-button:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
+
+/* 💬 Chat Bubbles */
+.chatbot-response {
+  margin-top: 15px;
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  font-size: 14px;
+  text-align: left;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* 🗨️ Chat Bubbles */
+.chat-bubble {
+  max-width: 80%;
+  padding: 12px;
+  border-radius: 10px;
+  margin: 8px 0;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInUp 0.3s ease-in-out forwards;
+}
+
+.user-message {
+  background: #00c6ff;
+  align-self: flex-end;
+  color: white;
+}
+
+.bot-message {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* 🎭 Dark/Light Mode Toggle */
+.toggle-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  color: #333;
+  padding: 8px 12px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* 🔥 Smooth Appear */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
