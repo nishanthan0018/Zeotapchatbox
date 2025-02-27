@@ -58,3 +58,22 @@ A chatbot designed to answer questions about Customer Data Platforms (CDPs) like
    ```bash
    git clone https://github.com/your-username/cdp-chatbot.git
    cd cdp-chatbot/backend
+2.Activate the virtual environment:
+
+On macOS/Linux:
+source venv/bin/activate
+
+3.Install Python dependencies:
+pip install flask flask-cors sentence-transformers numpy
+
+4.Run the Flask server:
+python app.py
+
+The backend will start at http://127.0.0.1:5000.
+
+Frontend Setup:
+1.Navigate to the frontend directory:
+cd ../frontend
+2.Install Node.js dependencies:
+npm install
+3.npm start
